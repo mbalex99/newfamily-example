@@ -44,7 +44,7 @@ gulp.task('build:index', function(){
     var copyIndex = gulp.src('client/index.html')
         .pipe(gulp.dest('dist'))
     return [copyJsNPMDependencies, copyIndex];
-})
+});
 
 gulp.task('build:app', function(){
     var tsProject = ts.createProject('client/tsconfig.json');
@@ -54,9 +54,11 @@ gulp.task('build:app', function(){
 	return tsResult.js
         .pipe(sourcemaps.write()) 
 		.pipe(gulp.dest('dist'))
-})
+});
 
 
 gulp.task('build', function(callback){
     runSequence('clean', 'build:server', 'build:index', 'build:app', callback);
-})
+});
+
+gulp.task('default', 'build');
