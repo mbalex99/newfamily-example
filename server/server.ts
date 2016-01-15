@@ -1,14 +1,13 @@
 import express = require('express');
 import path = require('path');
-var engine = require('ejs-mate');
 var port: number = process.env.PORT || 3000;
 var app = express();
 
-app.use('/client', express.static(path.resolve('./client')));
-app.use('/node_modules', express.static(path.resolve('./node_modules')));
+app.use('/app', express.static(path.resolve(__dirname, 'app')));
+app.use('/libs', express.static(path.resolve(__dirname, 'libs')));
 
 var renderIndex = (req: express.Request, res: express.Response) => {
-    res.render(path.resolve('./client/index.html'));
+    res.sendFile(path.resolve(__dirname, 'index.html'));
 }
 
 app.get('/*', renderIndex);

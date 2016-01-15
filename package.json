@@ -2,7 +2,7 @@
   "name": "newfamily-example",
   "version": "1.0.0",
   "description": "Angular2 Gulp Typescript and Express",
-  "main": "dist/server/server.js",
+  "main": "dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "gulp build"
@@ -24,7 +24,9 @@
   "devDependencies": {
     "del": "2.2.0",
     "gulp": "3.9.0",
+    "gulp-concat": "2.6.0",
     "gulp-sourcemaps": "1.6.0",
-    "gulp-typescript": "2.10.0"
+    "gulp-typescript": "2.10.0",
+    "run-sequence": "1.1.5"
   }
 }

@@ -2,12 +2,14 @@
 
   <head>
     <title>newfamily-example</title>
+    <base href="/"/>
 
     <!-- 1. Load libraries -->
-    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.js"></script>
-    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="libs/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="libs/systemjs/dist/system.src.js"></script>
+    <script src="libs/rxjs/bundles/Rx.js"></script>
+    <script src="libs/angular2/bundles/angular2.dev.js"></script>
+    <script src="libs/angular2/bundles/router.dev.js"></script>
 
     <!-- 2. Configure SystemJS -->
     <script>
@@ -19,12 +21,11 @@
           }
         }
       });
-      System.import('app/boot')
+      System.import('app/bootstrap')
             .then(null, console.error.bind(console));
     </script>
 
   </head>
-
   <!-- 3. Display the application -->
   <body>
     <my-app>Loading...</my-app>

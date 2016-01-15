@@ -40,3 +40,5 @@ client/**/*.js
 
 server/**/*.js.map
 server/**/*.js
+
+dist
