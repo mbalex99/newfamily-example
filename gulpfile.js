@@ -61,4 +61,4 @@ gulp.task('build', function(callback){
     runSequence('clean', 'build:server', 'build:index', 'build:app', callback);
 });
 
-gulp.task('default', 'build');
+gulp.task('default', ['build']);
