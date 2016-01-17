@@ -14,7 +14,7 @@ Getting Started, grab the dependencies with:
 
 then run
 
-`gulp build`
+`gulp`
 
 To run the server do this:
 

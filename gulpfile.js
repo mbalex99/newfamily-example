@@ -37,10 +37,13 @@ var jsNPMDependencies = [
 ] 
 
 gulp.task('build:index', function(){
-    var mappedPaths = jsNPMDependencies.map(file => {return path.resolve('node_modules', file)})
+    var mappedPaths = jsNPMDependencies.map(file => {return path.resolve('node_modules', file)}) 
     
+    //Let's copy our head dependencies into a dist/libs
     var copyJsNPMDependencies = gulp.src(mappedPaths, {base:'node_modules'})
         .pipe(gulp.dest('dist/libs'))
+     
+    //Let's copy our head dependencies into a dist/libs    
     var copyIndex = gulp.src('client/index.html')
         .pipe(gulp.dest('dist'))
     return [copyJsNPMDependencies, copyIndex];
