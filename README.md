@@ -1,7 +1,11 @@
 # Angular2 Beta with Gulp, Typescript, and Express  
 
-This uses SystemJS and a minimally configured gulpfile. This app uses HTML5 location paths.
-This app isn't meant to overwhelm you with an intensely complex gulp build system. I tried to be as explicit as possible.
+This uses SystemJS and a minimally configured gulpfile. **This app uses HTML5 location paths.
+This app isn't meant to overwhelm you with an intensely complex gulp build system.**
+
+If you're submitting pull requests please keep in mind that we shouldn't add features. Most examples are complete overkill for Angular2 beginners and we should just keep to the base libraries involved.
+
+I tried to be as explicit as possible.
 I believe it to be organized well enough for you to create a more robust app.
 
 I have purposefully made this project as THIN on the gulp side as possible as not to overwhelm people. 
